@@ -24,6 +24,9 @@ function gymfitness_scripts_styles(){
     //Cargamos nuestros estilos de reset para CSS con normalize
     wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '8.0.1');
 
+    //Cargamos nuestro archivo css para responsive nav jQuery plugin
+    wp_enqueue_style('slickNavCSS', get_template_directory_uri() . '/css/slicknav.min.css', array(), '1.0.10');
+
     //Cargamos nuestros estilos Open Sans de google web fonts
     wp_enqueue_style('openSans', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap', array(), '1.0.0');
     //Cargamos nuestros estilos Raleway de google web fonts
@@ -33,6 +36,12 @@ function gymfitness_scripts_styles(){
  
     //Cargamos la hoja de estilos principal de nuestro tema
     wp_enqueue_style('style', get_stylesheet_uri(), array('normalize', 'openSans', 'raleway', 'staatliches'), '1.0.0');
+
+    //Cargamos nuestro archivo js para responsive nav jQuery plugin    
+    wp_enqueue_script('slickNavJS', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), '1.0.10', true);
+
+     //Cargamos nuestro archivo script principal para nuestro tema 
+     wp_enqueue_script('script', get_template_directory_uri() . '/js/scripts.js', array('jquery', 'slickNavJS'), '1.0.0', true);
 
 }
 
