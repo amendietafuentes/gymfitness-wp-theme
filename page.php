@@ -1,12 +1,24 @@
 <?php get_header(); ?>
 
-<?php while( have_posts() ): the_post();?>
+<main class="contenedor pagina seccion con-sidebar">
+    <div class="contenido-principal">
+        <?php while( have_posts() ): the_post();?>
 
-<h1><?php the_title(); ?></h1>
-<p><?php the_content(); ?></p>
-Escrito por: <?php the_author(); ?>
-<br />
-Fecha: <?php the_date(); ?>
-<?php endwhile;?>
+            <h1 class="text-center texto-primario"><?php the_title(); ?></h1>
+
+            <?php 
+                if( has_post_thumbnail() ): 
+                    the_post_thumbnail('blog', array('class'=>'imagen-destacada'));
+                endif;
+            ?>
+
+            <p><?php the_content(); ?></p>
+
+        <?php endwhile;?>
+    </div>
+    
+    <?php get_sidebar();?>
+
+</main>
 
 <?php get_footer(); ?>
