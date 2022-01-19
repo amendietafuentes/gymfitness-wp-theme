@@ -278,6 +278,7 @@ img {
     color: var(--negro);
     text-align: center;
     font-size: 2rem;
+    padding: 0 .25rem;
 }
 
 .site-footer .menu-principal .current-menu-item {
