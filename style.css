@@ -329,3 +329,15 @@ img {
         flex: 0 0 calc(35% - 2rem);
     }
 }
+
+
+/** No Sidebar **/
+
+.no-sidebar {
+    display: flex;
+    justify-content: center;
+}
+
+.no-sidebar .contenido-principal {
+    flex: 0 1 800px;
+}
