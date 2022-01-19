@@ -2,7 +2,7 @@
 
 <main class="contenedor pagina seccion con-sidebar">
     <div class="contenido-principal">
-        <?php get_template_part( 'template-parts/loop-pages')?>
+        <?php get_template_part( 'template-parts/loop-pages');?>
     </div>
     
     <?php get_sidebar();?>

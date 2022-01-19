@@ -182,6 +182,11 @@ img {
     display: block;
 }
 
+.menu-principal a::before,
+.menu-principal a::after {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .menu-principal a {
         font-size: 2rem;
@@ -292,11 +297,6 @@ img {
     }
 }
 
-.menu-principal a::before,
-.menu-principal a::after {
-    display: none;
-}
-
 .copyright {
     text-align: center;
     font-size: 1.6rem;
@@ -341,4 +341,98 @@ img {
 
 .no-sidebar .contenido-principal {
     flex: 0 1 800px;
+}
+
+
+/** Clases **/
+
+.lista-clases {
+    margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .lista-clases {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+
+/** Cards **/
+
+@media (min-width: 768px) {
+    .gradient::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+35,0.2+55,0.65+100 */
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.2) 55%, rgba(0, 0, 0, 0.65) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.2) 55%, rgba(0, 0, 0, 0.65) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.2) 55%, rgba(0, 0, 0, 0.65) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+        /* IE6-9 */
+    }
+}
+
+.card {
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex: 0 0 calc(50% - 2rem);
+        position: relative;
+    }
+}
+
+.card img {
+    display: blog;
+}
+
+.card .contenido {
+    padding: 3rem;
+}
+
+@media (min-width: 768px) {
+    .card .contenido {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: left;
+        z-index: 2;
+    }
+}
+
+.card .contenido h3 {
+    line-height: 1;
+    color: var(--colorPrimario);
+}
+
+@media (min-width: 768px) {
+    .card .contenido h3 {
+        color: var(--blanco);
+        font-size: 2.8rem;
+        font-weight: 700;
+    }
+}
+
+.card .contenido p {
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .card .contenido p {
+        color: var(--colorPrimario);
+        font-weight: 700;
+    }
 }
